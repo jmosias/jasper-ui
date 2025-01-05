@@ -1,0 +1,48 @@
+.j-button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.6em;
+  line-height: 1;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.j-button--primary,
+.j-button--secondary:hover {
+  background: rgba(251, 227, 218, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(251, 227, 218, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  color: #090302;
+}
+.j-button--secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 0.05rem solid rgba(255, 255, 255, 0.5);
+}
+.j-button--glass {
+  backdrop-filter: blur(12px);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  color: #fff;
+}
+.j-button--small {
+  padding: 12px 18px;
+  font-size: 12px;
+}
+.j-button--medium {
+  padding: 15px 24px;
+  font-size: 14px;
+}
+.j-button--large {
+  padding: 18px 30px;
+  font-size: 16px;
+}

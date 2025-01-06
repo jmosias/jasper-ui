@@ -1,7 +1,9 @@
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { Button } from "@/app/components/Button";
+import { Button } from "@/app/components/jasper/Button";
+import { CardDisplay } from "@/app/components/storybook/CardDisplay";
 
 const meta = {
   title: "Components/Button",
@@ -14,6 +16,13 @@ const meta = {
     backgroundColor: { control: "color" },
   },
   args: { onClick: fn() },
+  decorators: [
+    (Story) => (
+      <CardDisplay>
+        <Story />
+      </CardDisplay>
+    ),
+  ],
 } satisfies Meta<typeof Button>;
 
 export default meta;

@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  width: 400px;
+  height: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.gradient {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.shape1 {
+  background: linear-gradient(135deg, #dd4c19, #e96535);
+  top: -50px;
+  left: -50px;
+}
+
+.shape2 {
+  background: linear-gradient(135deg, #fbe3da, #fff);
+  bottom: -50px;
+  right: -50px;
+}

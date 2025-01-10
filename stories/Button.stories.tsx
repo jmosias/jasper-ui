@@ -1,11 +1,11 @@
 import React from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryFn } from "@storybook/react";
 import { fn } from "@storybook/test";
 
-import { Button } from "@/app/components/jasper/Button";
+import { Button, ButtonProps } from "@/app/components/jasper/Button";
 import { CardDisplay } from "@/app/components/storybook/CardDisplay";
 
-const meta = {
+export default {
   title: "Components/Button",
   component: Button,
   parameters: {
@@ -23,42 +23,22 @@ const meta = {
       </CardDisplay>
     ),
   ],
-} satisfies Meta<typeof Button>;
+} as Meta<ButtonProps>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
+const defaultLabel = "Button";
 
-export const Primary: Story = {
-  args: {
-    type: "primary",
-    label: "Button",
-  },
-};
+export const Primary = Template.bind({});
+Primary.args = { type: "primary", label: defaultLabel };
 
-export const Secondary: Story = {
-  args: {
-    type: "secondary",
-    label: "Button",
-  },
-};
+export const Secondary = Template.bind({});
+Secondary.args = { type: "secondary", label: defaultLabel };
 
-export const Glass: Story = {
-  args: {
-    type: "glass",
-    label: "Button",
-  },
-};
+export const Glass = Template.bind({});
+Glass.args = { type: "glass", label: defaultLabel };
 
-export const Medium: Story = {
-  args: {
-    size: "medium",
-    label: "Button",
-  },
-};
+export const Medium = Template.bind({});
+Medium.args = { size: "medium", label: defaultLabel };
 
-export const Large: Story = {
-  args: {
-    size: "large",
-    label: "Button",
-  },
-};
+export const Large = Template.bind({});
+Large.args = { size: "large", label: defaultLabel };
